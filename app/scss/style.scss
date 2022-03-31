@@ -7,7 +7,10 @@
 @import 'global';
 
 .header {
+  position: relative;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
   &__nav {
     padding: 18px 0 19px;
     display: flex;
@@ -24,27 +27,24 @@
     transform: translateX(-50%);
   }
 
+  &__form {
+    display: flex;
+  }
+
   &__input {
-    padding: 10px 82px 11px 56px;
+    padding: 10px 80px 11px 56px;
     border-radius: 3px 0 0 3px;
     border: 1px solid #D9D9D9;
-    position: relative;
     line-height: 1.5;
     outline: transparent;
+    background-image: url('../images/sprite.svg#search');
+    background-position: 11px center;
+    background-repeat: no-repeat;
+    background-size: 25px 21px;
+    max-width: 253.5px;
+
     &::placeholder {
       color: #e0e0e0;
-    }
-
-    &::before {
-      content: '';
-      background-image: url('../images/sprite.svg#search');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 25px;
-      height: 21px;
-      position: absolute;
-      left: 0;
     }
   }
 
@@ -77,6 +77,14 @@
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: cover;
+
+        &--active {
+          background-color: $orange;
+        }
+
+        &:hover {
+          background-color: $orange;
+        }
       }
     }
   }
@@ -87,5 +95,61 @@
     font-size: 12px;
     line-height: 1.9;
     letter-spacing: 1px;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &--active {
+      color: $orange;
+    }
   }
+}
+
+.hero {
+  padding: 153px 0 176px;
+  background-image: url('../images/content/herobg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  &__inner {
+    max-width: 576px;
+    transform: translatex(25%);
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 1.95;
+    margin-bottom: 85px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:first-child {
+      .hero__link {
+        background: $orange;
+        color: #fff;
+      }
+    }
+
+    &:last-child {
+      .hero__link {
+        background-color: #fff;
+        color: #4d4d4d;
+      }
+    }
+  }
+
+
 }
