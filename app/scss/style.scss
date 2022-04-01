@@ -11,6 +11,12 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 10;
 
+  &__container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
   &__nav {
     padding: 18px 0 19px;
     display: flex;
@@ -107,14 +113,14 @@
 }
 
 .hero {
-  padding: 153px 0 176px;
+  padding: 153px 0 177px;
   background-image: url('../images/content/herobg.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
+
   &__inner {
     max-width: 576px;
-    transform: translatex(25%);
   }
 
   &__title {
@@ -152,4 +158,100 @@
   }
 
 
+}
+
+.our-help {
+  padding: 53px 0 17px;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    transform: translateX(-40px);
+  }
+  &__title {
+    max-width: 125px;
+    color: $green;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-right: 70px;
+  }
+
+  &__item {
+    color: #252061;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+}
+
+.our-writers {
+  max-width: 600px;
+  width: 100%;
+  padding: 37px 55px 51px;
+  background-color: #252061;
+  box-shadow: 7px 7px 50px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  background-image: url('../images/sprite.svg#bg-lines');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0.96;
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    margin-bottom: 18.5px;
+    max-width: 306px;
+  }
+
+  &__list {
+    display: inline-flex;
+    position: relative;
+  }
+
+  &__item {
+    &:nth-child(2) {
+      .our-writers__img {
+        position: absolute;
+        top: 12px;
+        left: 45%;
+        transform: translate(-45%);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__row {
+    display: inline-flex;
+    position: relative;
+  }
+
+  &__img {
+    display: inline-block;
+    border-radius: 10px;
+  }
+
+  &__link {
+    display: inline-block;
+    background-color: $green;
+    padding: 12px 15px;
+    box-shadow: 6px 6px 13px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 11px;
+    right: 0;
+    transform: translateX(90%);
+  }
 }
