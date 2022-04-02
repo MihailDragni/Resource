@@ -117,7 +117,6 @@
   background-image: url('../images/content/herobg.jpg');
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;
 
   &__inner {
     max-width: 576px;
@@ -161,7 +160,10 @@
 }
 
 .our-help {
-  padding: 53px 0 17px;
+  padding: 53px 0 58px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
   position: relative;
 
   &__inner {
@@ -198,6 +200,8 @@
   background-size: cover;
   background-position: center;
   position: absolute;
+  // bottom: -51px;
+  // right: -269px;
   bottom: 0;
   right: 0;
   z-index: 5;
@@ -254,4 +258,72 @@
     right: 0;
     transform: translateX(90%);
   }
+}
+
+.our-blog {
+  padding-top: 48px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: grid;
+  }
+
+  &__item {
+    position: relative;
+    &:first-child {
+      background-image: url('../images/content/moto.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      max-width: 534px;
+      height: 675px;
+    }
+  }
+}
+
+.info {
+  max-width: 427px;
+  padding: 28px 40px 0 0;
+  background-color: #ffffff;
+  color: #252061;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  &__title {
+    font-size: 30px;
+    margin-bottom: 13px;
+    line-height: 1.27;
+    max-width: 314px;
+  }
+
+  &__text {
+    color: #969696;
+    max-width: 377px;
+    margin-bottom: 15px;
+  }
+}
+
+.info-author {
+  display: flex;
+  &__img {
+    margin-right: 10px;
+  }
+  &__name {
+    font-size: 15px;
+    line-height: 1.53;
+  }
+
+  &__date {
+    font-size: 13px;
+    line-height: 1.77;
+  }
+}
+
+
+.footer {
+  padding: 130px 0 80px;
+  background-color: #fff;
 }
