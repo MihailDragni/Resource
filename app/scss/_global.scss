@@ -98,6 +98,12 @@ body {
   }
 }
 
+.logo {
+  &__img {
+    object-fit: cover;
+  }
+}
+
 // .input-hidden {
 //   width: 1px;
 //   height: 1px;
