@@ -452,6 +452,156 @@
   }
 }
 
+.access {
+  padding: 341px 0 150px;
+  background: url('../images/sprite.svg#access-lines') center top no-repeat #252061;
+  background-size: cover;
+  position: relative;
+  top: -213px;
+  z-index: -1;
+  &__title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 37px;
+  }
+
+  &__list {
+    display: flex;
+    margin-bottom: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    &:nth-child(2) {
+      .access-card {
+        padding: 57px 41px 60px;
+        background-color: #fff;
+        &__name {
+          color: $green;
+        }
+
+        &__btn {
+          background-color: $orange;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    color: #fff;
+    align-items: center;
+  }
+
+  &__column {
+    max-width: 487px; 
+    margin-right: 101px;
+  }
+
+  &__name {
+    font-size: 21px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url('../images/sprite.svg#info');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.62;
+  }
+}
+
+.access-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 7px 7px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 41px 41px 40px;
+  max-width: 287px;
+  &__name {
+    font-size: 15px;
+    line-height: 1.53;
+    color: #183EB6;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    font-size: 55px;
+    line-height: 0.62;
+    color: #000;
+    margin-bottom: 36px;
+    span {
+      line-height: 2.43;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+  }
+
+  &__accesses {
+    flex: 1 1 auto;
+    margin-bottom: 30px;
+  }
+
+  &__access {
+    padding-left: 30px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #000;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url('../images/sprite.svg#check');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 15px;
+      height: 12px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    background-color: $green;
+    color: #fff;
+    padding: 12px 25px;
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    font-size: 11px;
+    line-height: 1.73;
+    color: #9da0ac;
+  }
+}
+
+
+
+
+
 
 
 
