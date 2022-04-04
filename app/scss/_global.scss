@@ -104,6 +104,27 @@ body {
   }
 }
 
+.form {
+  display: flex;
+  line-height: 1.5;
+
+  &__input {
+    background-image: url('../images/sprite.svg#search');
+    border-radius: 3px 0 0 3px;
+    outline: transparent;
+    background-repeat: no-repeat;
+
+    &::placeholder {
+      color: #e0e0e0;
+    }
+  }
+
+  &__button {
+    color: #e0e0e0;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
 // .input-hidden {
 //   width: 1px;
 //   height: 1px;

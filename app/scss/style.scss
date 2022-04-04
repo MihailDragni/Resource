@@ -33,33 +33,18 @@
     transform: translateX(-50%);
   }
 
-  &__form {
-    display: flex;
-  }
-
   &__input {
     padding: 10px 80px 11px 56px;
-    border-radius: 3px 0 0 3px;
     border: 1px solid #D9D9D9;
-    line-height: 1.5;
-    outline: transparent;
-    background-image: url('../images/sprite.svg#search');
+
     background-position: 11px center;
-    background-repeat: no-repeat;
     background-size: 25px 21px;
     max-width: 253.5px;
-
-    &::placeholder {
-      color: #e0e0e0;
-    }
   }
 
   &__button {
     padding: 10px 43px 11px 44px;
     background-color: #b8bdc9;
-    border-radius: 0 3px 3px 0;
-    color: #e0e0e0;
-    line-height: 1.5;
   }
 }
 
@@ -116,7 +101,9 @@
   padding: 153px 0 177px;
   background-image: url('../images/content/herobg.jpg');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
 
   &__inner {
     max-width: 576px;
@@ -456,9 +443,8 @@
   padding: 341px 0 150px;
   background: url('../images/sprite.svg#access-lines') center top no-repeat #252061;
   background-size: cover;
-  position: relative;
-  top: -213px;
-  z-index: -1;
+  margin-top: -213px;
+
   &__title {
     color: #fff;
     text-align: center;
@@ -477,6 +463,7 @@
       .access-card {
         padding: 57px 41px 60px;
         background-color: #fff;
+
         &__name {
           color: $green;
         }
@@ -496,11 +483,13 @@
     display: flex;
     color: #fff;
     align-items: center;
+    padding-left: 65px;
+
   }
 
   &__column {
-    max-width: 487px; 
-    margin-right: 101px;
+    max-width: 487px;
+    margin-right: 136px;
   }
 
   &__name {
@@ -509,6 +498,7 @@
     margin-bottom: 16px;
     padding-left: 30px;
     position: relative;
+
     &::before {
       content: '';
       background-image: url('../images/sprite.svg#info');
@@ -536,6 +526,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 41px 41px 40px;
   max-width: 287px;
+
   &__name {
     font-size: 15px;
     line-height: 1.53;
@@ -548,6 +539,7 @@
     line-height: 0.62;
     color: #000;
     margin-bottom: 36px;
+
     span {
       line-height: 2.43;
       font-size: 14px;
@@ -566,6 +558,7 @@
     line-height: 1.54;
     color: #000;
     position: relative;
+
     &::before {
       content: '';
       background-image: url('../images/sprite.svg#check');
@@ -579,6 +572,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -595,6 +589,103 @@
     font-size: 11px;
     line-height: 1.73;
     color: #9da0ac;
+  }
+}
+
+.search {
+  padding: 100px 0;
+  text-align: center;
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 2.04;
+  }
+
+  &__title {
+    margin-top: -12px;
+    margin-bottom: 62px;
+  }
+
+  &__form {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  &__input {
+    padding: 14px 122px 15px 68px;
+    border: 1px solid #9da0ac;
+    max-width: 306px;
+    background-position: 16px center;
+    background-size: 23px 20px;
+  }
+
+  &__button {
+    padding: 14px 57px 15px 58px;
+    background-color: $green;
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search-box {
+  border: 3px solid #E6E8EE;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    padding: 30px;
+    flex: 1 0 auto;
+  }
+
+  &__name {
+    font-size: 17px;
+    line-height: 1.35;
+    color: #252061;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    text-align: left;
+    padding-left: 28px;
+    position: relative;
+    
+    &::before {
+      content: '';
+      background-image: url('../images/sprite.svg#list');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 14px;
+      height: 18px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    color: $orange;
+    font-size: 12px;
+    line-height: 1.92;
+  }
+
+  &__bot {
+    padding: 15px 30px;
+    background-color: #eef1f6;
+  }
+
+  &__view {
+    text-align: left;
+    display: block;
+    font-size: 11px;
+    line-height: 2.09;
+    color: #252061;
   }
 }
 
