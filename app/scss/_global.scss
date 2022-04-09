@@ -69,16 +69,6 @@ body {
     color: $orange;
     border-bottom: 4px solid $orange;
   }
-
-  // &::after {
-  //   content: '';
-  //   width: 100%;
-  //   height: 4px;
-  //   background-color: $green;
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  // }
 }
 
 .link {
@@ -98,7 +88,36 @@ body {
   }
 }
 
+.burger {
+  order: 3;
+  position: relative;
+  z-index: 10;
+
+  @include md($tablet) {
+    @include burger;
+    order: 4;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  // position: relative;
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   transition: background-color 0.3s;
+  // }
+}
+
 .logo {
+  position: relative;
+  z-index: 10;
   &__img {
     object-fit: cover;
   }
@@ -114,6 +133,10 @@ body {
     outline: transparent;
     background-repeat: no-repeat;
 
+    @include md($phone) {
+      background-image: none;
+    }
+
     &::placeholder {
       color: #e0e0e0;
     }
@@ -125,10 +148,11 @@ body {
   }
 }
 
-// .input-hidden {
-//   width: 1px;
-//   height: 1px;
-//   overflow: hidden;
-//   clip: rect(0 0 0 0);
-//   position: absolute;
-// }
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

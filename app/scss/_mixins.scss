@@ -14,12 +14,6 @@
   }
 }
 
-$breakpoints: ("tel":375px,
-  "phone": 560px,
-  "tablet": 768px,
-  "tablet-2": 992px,
-  "desktop": 1230px);
-
 @mixin md($width) {
   @media (max-width: #{$width}px) {
     @content;
@@ -67,46 +61,9 @@ $breakpoints: ("tel":375px,
   &::after {
     top: calc(100% - $burgerLineHeight);
   }
-}
-
-@mixin mobile-burger {
-  width: $mobileburgerWidth; //указываем ширину линий
-  height: $mobileburgerHeight; //указываем высоту линий
-  position: relative;
-  color: $burgerColor; //указываем цвет линий
-
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: $burgerLineHeight; //указываем расстояние между линиями
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: $burgerLineHeight;
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    top: calc(100% - $burgerLineHeight);
-  }
 
   &--active {
-    .mobile-burger__line {
+    .burger__line {
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
