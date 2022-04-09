@@ -58,6 +58,13 @@ body {
   font-size: 49px;
   line-height: 1.33;
   font-weight: 400;
+  @include md($mobile) {
+    font-size: 36px;
+  }
+
+  @include md($phone) {
+    font-size: 28px;
+  }
 }
 
 .highlight {
@@ -74,17 +81,26 @@ body {
 .link {
   display: inline-block;
   padding: 8px 25px 1px 30px;
+  @include md($phone) {
+    padding: 5px 15px 1px 15px;
+  }
 
   &__top {
     display: block;
     font-size: 23px;
     line-height: 1;
+    @include md($phone) {
+      font-size: 18px;
+    }
   }
 
   &__desc {
     font-size: 14px;
     line-height: 1.64;
     text-transform: capitalize;
+    @include md($phone) {
+      font-size: 12px;
+    }
   }
 }
 

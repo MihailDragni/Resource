@@ -1,3 +1,4 @@
+//shortens the sentence
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
     overflow: hidden;
@@ -14,6 +15,7 @@
   }
 }
 
+//adaptive design
 @mixin md($width) {
   @media (max-width: #{$width}px) {
     @content;
@@ -26,11 +28,12 @@
   }
 }
 
+//mobile-menu burger
 @mixin burger {
-  width: $burgerWidth; //указываем ширину линий
-  height: $burgerHeight; //указываем высоту линий
+  width: $burgerWidth; 
+  height: $burgerHeight; 
   position: relative;
-  color: $burgerColor; //указываем цвет линий
+  color: $burgerColor;
 
   &__line {
     position: absolute;
@@ -38,7 +41,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    height: $burgerLineHeight; //указываем расстояние между линиями
+    height: $burgerLineHeight;
     background-color: currentColor;
     transition: transform 0.3s ease-in-out;
   }
@@ -79,5 +82,22 @@
       top: 50%;
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
+  }
+}
+
+//responsive-ratio
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + '%');
+
+  @if $pseudo {
+    &::before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  }
+
+  @else {
+    padding-top: $padding;
   }
 }
