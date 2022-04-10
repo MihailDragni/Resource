@@ -231,24 +231,18 @@
   //   }
   // }
 
-  @include md($tablet) {
+  @include md($mobile) {
+    padding: 120px 0;
     background-position: left center;
   }
 
-  @include md($mobile) {
-    padding: 70px 0;
-  }
-
   @include md($phone) {
-    padding: 70px 0 40px;
+    padding: 90px 0 40px;
   }
 
 
   &__inner {
     max-width: 576px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
   }
 
   &__title {
@@ -262,7 +256,7 @@
   &__text {
     font-size: 19px;
     line-height: 1.95;
-    flex: 1 1 auto;
+    margin-bottom: 85px;
 
     @include md($mobile) {
       font-size: 15px;
@@ -483,7 +477,21 @@
   &__list {
     display: grid;
     grid-template-columns: 534px 376px;
-    grid-gap: 30px;
+    gap: 30px;
+
+    @include md($tablet) {
+      justify-content: center;
+      grid-template-columns: 434px 276px;
+      gap: 20px;
+    }
+
+    @include md($mobile) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include md($phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -493,12 +501,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @include md($mobile) {
+      height: 200px;
+    }
 
     &:first-child {
       background-image: url('../images/content/moto.jpg');
       max-width: 534px;
       height: 675px;
       grid-row: span 3;
+      @include md($phone) {
+        height: 555px;
+      }
     }
 
     &:nth-child(2) {
@@ -514,6 +528,9 @@
       background: url('../images/sprite.svg#bg-lines') center top no-repeat #252061;
       background-size: cover;
       padding: 45px 60px 40px;
+      @include md($tablet) {
+        padding: 20px 40px;
+      }
     }
   }
 
@@ -542,19 +559,33 @@
   color: #252061;
   position: absolute;
   bottom: -35px;
-  left: 0;
+  left: -2px;
+  @include md($mobile) {
+    max-width: 327px;
+    padding: 20px 30px 0 0;
+    bottom: -1px;
+  }
 
   &__title {
     font-size: 30px;
     margin-bottom: 13px;
     line-height: 1.27;
     max-width: 314px;
+    @include md($mobile) {
+      font-size: 26px;
+    }
   }
 
   &__text {
     color: #969696;
     max-width: 377px;
     margin-bottom: 15px;
+    @include md($mobile) {
+      font-size: 13px;
+    }
+    @include md($phone) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -582,8 +613,8 @@
   background-color: #fff;
   padding-top: 20px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -2px;
+  left: -2px;
 
   &__time {
     margin-bottom: 4px;
