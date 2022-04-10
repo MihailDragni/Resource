@@ -81,7 +81,7 @@ body {
 .link {
   display: inline-block;
   padding: 8px 25px 1px 30px;
-  @include md($phone) {
+  @include md($mobile) {
     padding: 5px 15px 1px 15px;
   }
 
@@ -89,7 +89,7 @@ body {
     display: block;
     font-size: 23px;
     line-height: 1;
-    @include md($phone) {
+    @include md($mobile) {
       font-size: 18px;
     }
   }
@@ -98,7 +98,7 @@ body {
     font-size: 14px;
     line-height: 1.64;
     text-transform: capitalize;
-    @include md($phone) {
+    @include md($mobile) {
       font-size: 12px;
     }
   }
