@@ -32,14 +32,27 @@ $(function(){
   $(document).ready(function(){
     var cur_width = $(window).width();
     $(window).resize(function(){
-        if($(window).width() <= 768 && cur_width > 768){
+        if($(window).width() <= 992 && cur_width > 992){
             //reload
             location.reload();
         }
-        else if($(window).width() > 768 && cur_width <= 768){
+        else if($(window).width() > 992 && cur_width <= 992){
             //reload
             location.reload();
         }
     });
   });
+  if (window.matchMedia("(max-width: 992px)").matches) {
+      let accessSwiper = new Swiper ('.access__swiper', {
+        slidesperview: 1,
+        slidesPerGroup: 1,
+        loop: false,
+        spaceBetween: 60,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+        },
+      });
+    }
 });
