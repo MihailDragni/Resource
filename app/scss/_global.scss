@@ -164,6 +164,14 @@ body {
   }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+  @include md($tablet) {
+    display: block;
+  }
+}
+
 
 .hidden {
   width: 1px;

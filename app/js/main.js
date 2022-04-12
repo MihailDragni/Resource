@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 $(function(){
   $(document).ready(function(){
     var cur_width = $(window).width();
@@ -53,6 +52,17 @@ $(function(){
           type: 'bullets',
           clickable: true,
         },
+      });
+
+      let aboutSwiper = new Swiper ('.about-us__swiper', {
+        slidesperview: 1,
+        slidesPerGroup: 1,
+        loop: false,
+        spaceBetween: 150,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
       });
     }
 });
