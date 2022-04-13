@@ -47,6 +47,7 @@ $(function(){
         slidesPerGroup: 1,
         loop: false,
         spaceBetween: 60,
+        speed: 800,
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
@@ -58,6 +59,7 @@ $(function(){
         slidesperview: 1,
         slidesPerGroup: 1,
         loop: false,
+        speed: 800,
         spaceBetween: 150,
         navigation: {
             nextEl: '.swiper-button-next',
