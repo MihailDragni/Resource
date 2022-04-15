@@ -966,19 +966,49 @@
   padding: 100px 0;
   text-align: center;
 
+  @include md($tablet) {
+    padding: 70px 0;
+  }
+
+  @include md($mobile) {
+    padding: 60px 0;
+  }
+
   &__subtitle {
     font-size: 24px;
     line-height: 2.04;
+
+    @include md($tablet) {
+      font-size: 20px;
+    }
+
+    @include md($mobile) {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
     margin-top: -12px;
     margin-bottom: 62px;
+
+    @include md($tablet) {
+      margin-bottom: 40px;
+    }
   }
 
   &__form {
     justify-content: center;
     margin-bottom: 60px;
+
+    @include md($tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include md($phone) {
+      margin-bottom: 30px;
+    }
   }
 
   &__input {
@@ -987,16 +1017,40 @@
     max-width: 306px;
     background-position: 16px center;
     background-size: 23px 20px;
+
+    @include md($tablet) {
+      max-width: 256px;
+      padding: 10px 70px 11px 50px;
+    }
+
+    @include md($phone) {
+      max-width: 200px;
+      padding: 8px 20px;
+    }
   }
 
   &__button {
     padding: 14px 57px 15px 58px;
     background-color: $green;
+
+    @include md($tablet) {
+      padding: 10px 45px;
+    }
+
+    @include md($phone) {
+      padding: 8px 25px;
+    }
   }
 
   &__boxes {
     display: flex;
     justify-content: space-between;
+
+    @include md($tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
   }
 }
 
@@ -1004,10 +1058,15 @@
   border: 3px solid #E6E8EE;
   display: flex;
   flex-direction: column;
+  width: 294px;
 
   &__top {
     padding: 30px;
     flex: 1 0 auto;
+
+    @include md($mobile) {
+      padding: 20px;
+    }
   }
 
   &__name {
@@ -1062,6 +1121,7 @@
 
 .about {
   display: flex;
+
   @include md($tablet) {
     flex-direction: column;
   }
@@ -1074,6 +1134,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: -70px;
+
   @include md($desktop) {
     margin-top: 0;
     padding-left: 15px;
@@ -1087,6 +1148,7 @@
   &__wrapper {
     max-width: 460px;
     width: 100%;
+
     @include md($mobile) {
       max-width: 380px;
     }
@@ -1100,6 +1162,7 @@
     font-size: 28px;
     line-height: 1.07;
     margin-bottom: 49px;
+
     @include md($mobile) {
       font-size: 24px;
     }
@@ -1108,6 +1171,7 @@
   &__swiper {
     padding: 55px 55px 55px 70px;
     margin: -55px -55px -55px -70px;
+
     @include md($tablet) {
       padding: 55px;
       margin: -55px;
@@ -1128,6 +1192,7 @@
     position: relative;
     box-shadow: (21px 21px 70px rgba(0, 0, 0, 0.2));
     margin-right: 150px;
+
     @include md($tablet) {
       box-shadow: (11px 11px 30px rgba(0, 0, 0, 0.2));
       margin-right: 0;
@@ -1147,6 +1212,7 @@
     bottom: 0;
     left: -60px;
     box-shadow: 14px 14px 40px rgba(0, 0, 0, 0.1);
+
     @include md($desktop) {
       left: 0;
     }
@@ -1162,6 +1228,7 @@
       margin-bottom: 22px;
       max-width: 181px;
       color: #524b9a;
+
       @include md($mobile) {
         font-size: 15px;
         margin-bottom: 12px;
@@ -1173,6 +1240,7 @@
       color: #050505;
       margin-bottom: 18px;
       max-width: 212px;
+
       @include md($mobile) {
         font-size: 12px;
         margin-bottom: 12px;
@@ -1199,6 +1267,7 @@
     position: absolute;
     bottom: 35px;
     right: -10px;
+
     @include md($mobile) {
       padding: 8px 15px;
     }
@@ -1215,18 +1284,21 @@
   flex: 0 1 50%;
   padding: 50px 0 55px 55px;
   background-color: #F0F0F0;
+
   @include md($tablet) {
     display: flex;
     padding: 55px;
     flex-direction: column;
     align-items: center;
   }
+
   @include md($mobile) {
     padding: 55px 15px;
   }
 
   &__wrapper {
     max-width: 350px;
+
     @include md($tablet) {
       max-width: 515px;
     }
@@ -1236,9 +1308,11 @@
     font-size: 28px;
     line-height: 1.07;
     margin-bottom: 49px;
+
     @include md($mobile) {
       font-size: 24px;
     }
+
     @include md($phone) {
       font-size: 21px;
       margin-bottom: 35px;
@@ -1247,6 +1321,7 @@
 
   &__list {
     margin-bottom: 30px;
+
     @include md($phone) {
       margin-bottom: 20px;
     }
@@ -1255,12 +1330,14 @@
   &__item {
     border-top: 1px solid #DADADA;
     padding-top: 14px;
+
     @include md($mobile) {
       padding-top: 8px;
     }
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
       @include md($mobile) {
         margin-bottom: 15px;
       }
@@ -1272,6 +1349,7 @@
     line-height: 1.25;
     color: #524b9a;
     margin-bottom: 8px;
+
     @include md($mobile) {
       font-size: 18px;
     }
@@ -1284,6 +1362,7 @@
     margin-bottom: 24px;
     padding-right: 45px;
     position: relative;
+
     @include md($mobile) {
       font-size: 13px;
       margin-bottom: 14px;
@@ -1306,6 +1385,7 @@
 
   &__link {
     color: #4163ac;
+
     @include md($mobile) {
       font-size: 13px;
     }
